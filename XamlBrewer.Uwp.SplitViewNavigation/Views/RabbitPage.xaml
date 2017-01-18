@@ -1,0 +1,39 @@
+﻿<Page x:Class="XamlBrewer.Uwp.SplitViewNavigation.RabbitPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:vm="using:XamlBrewer.Uwp.SplitViewNavigation.ViewModels"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+
+    <Page.DataContext>
+        <vm:RabbitPageViewModel />
+    </Page.DataContext>
+
+    <Grid Background="Transparent">
+        <TextBlock Text="Rabbit"
+                   Foreground="{StaticResource PageForegroundBrush}"
+                   Margin="24"
+                   FontSize="48"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left" />
+        <Path Data="{StaticResource RabbitIcon}"
+              Fill="{StaticResource PageForegroundBrush}"
+              VerticalAlignment="Top"
+              HorizontalAlignment="Right"
+              Height="96"
+              Width="96"
+              Margin="24"
+              Stretch="Uniform" />
+        <Button Command="{Binding SettingsCommand}"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Margin="24"
+                Height="96"
+                Width="96">
+            <Path Data="{StaticResource GearIcon}"
+                  Fill="{StaticResource PageForegroundBrush}"
+                  Stretch="Uniform" />
+        </Button>
+    </Grid>
+</Page>

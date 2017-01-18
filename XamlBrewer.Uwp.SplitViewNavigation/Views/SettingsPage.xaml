@@ -1,0 +1,35 @@
+﻿<Page x:Class="XamlBrewer.Uwp.SplitViewNavigation.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:XamlBrewer.Uwp.SplitViewNavigation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Transparent">
+        <TextBlock Text="Settings"
+                   Foreground="{StaticResource PageForegroundBrush}"
+                   Margin="24"
+                   FontSize="48"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left" />
+        <Path Data="{StaticResource GearIcon}"
+              Fill="{StaticResource PageForegroundBrush}"
+              VerticalAlignment="Top"
+              HorizontalAlignment="Right"
+              Height="96"
+              Width="96"
+              Margin="24"
+              Stretch="Uniform" />
+        <Button Command="{x:Bind AboutCommand}"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Margin="24"
+                Height="96"
+                Width="96">
+            <Path Data="{StaticResource InfoIcon}"
+                  Fill="{StaticResource PageForegroundBrush}"
+                  Stretch="Uniform" />
+        </Button>
+    </Grid>
+</Page>
