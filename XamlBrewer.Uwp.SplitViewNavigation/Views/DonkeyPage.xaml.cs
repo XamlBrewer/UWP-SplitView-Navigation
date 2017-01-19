@@ -1,4 +1,5 @@
 ﻿using Windows.UI.Xaml.Controls;
+using Mvvm.Services;
 
 namespace XamlBrewer.Uwp.SplitViewNavigation
 {
@@ -7,6 +8,9 @@ namespace XamlBrewer.Uwp.SplitViewNavigation
         public DonkeyPage()
         {
             this.InitializeComponent();
+
+            // To test the unregistration of the handler.
+            Navigation.EnableBackButton();
         }
     }
 }
