@@ -21,10 +21,16 @@ namespace Mvvm.Services
                 var titleBar = ApplicationView.GetForCurrentView().TitleBar;
                 if (titleBar != null)
                 {
-                    titleBar.ButtonBackgroundColor = ((SolidColorBrush)Application.Current.Resources["TitlebarBackgroundBrush"]).Color;
-                    titleBar.ButtonForegroundColor = Colors.White;
                     titleBar.BackgroundColor = ((SolidColorBrush)Application.Current.Resources["TitlebarBackgroundBrush"]).Color;
                     titleBar.ForegroundColor = Colors.White;
+                    titleBar.ButtonBackgroundColor = titleBar.BackgroundColor;
+                    titleBar.ButtonForegroundColor = Colors.White;
+                    titleBar.ButtonHoverBackgroundColor = ((SolidColorBrush)Application.Current.Resources["TitlebarBackgroundDarkBrush"]).Color;
+                    titleBar.ButtonHoverForegroundColor = Colors.White;
+                    titleBar.InactiveBackgroundColor = titleBar.BackgroundColor;
+                    titleBar.InactiveForegroundColor = titleBar.ForegroundColor;
+                    titleBar.ButtonInactiveBackgroundColor = titleBar.BackgroundColor;
+                    titleBar.ButtonInactiveForegroundColor = titleBar.ButtonForegroundColor;
                 }
             }
 

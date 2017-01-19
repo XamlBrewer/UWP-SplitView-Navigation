@@ -12,6 +12,8 @@
     <!-- Header -->
     <SolidColorBrush x:Key="TitlebarBackgroundBrush"
                      Color="#816B1B" />
+    <SolidColorBrush x:Key="TitlebarBackgroundDarkBrush"
+                     Color="#534307" />
     <SolidColorBrush x:Key="StatusbarBackgroundBrush"
                      Color="#816B1B" />
     <!-- Splitview Pane -->
