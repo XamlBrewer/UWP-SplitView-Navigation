@@ -51,7 +51,8 @@
                 </Border>
                 <TextBlock Text="{x:Bind Text}"
                            Margin="12 0 0 0"
-                           Foreground="{StaticResource SplitViewForegroundBrush}" />
+                           Foreground="{StaticResource SplitViewForegroundBrush}"
+                           VerticalAlignment="Center" />
             </StackPanel>
         </DataTemplate>
     </Page.Resources>
@@ -131,12 +132,12 @@
                 Width="48"
                 Height="48"
                 Background="Transparent"
-                Foreground="{StaticResource SplitViewHighlightBrush}"
+                Foreground="{StaticResource HamburgerForegroundBrush}"
                 VerticalAlignment="Top"
                 BorderThickness="0"
                 Click="HamburgerButton_Click">
             <Path Data="{StaticResource HamburgerIcon}"
-                  Fill="{StaticResource SplitViewHighlightBrush}"
+                  Fill="{StaticResource HamburgerForegroundBrush}"
                   VerticalAlignment="Center"
                   HorizontalAlignment="Center"
                   Height="24"

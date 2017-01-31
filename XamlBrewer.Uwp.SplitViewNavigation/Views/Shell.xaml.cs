@@ -84,13 +84,15 @@ namespace XamlBrewer.Uwp.SplitViewNavigation
         {
             // Lookup destination type in menu(s)
             var item = (from i in Menu.Items
-                where (i as MenuItem).NavigationDestination == e.SourcePageType
-                select i).FirstOrDefault();
+                        where (i as MenuItem).NavigationDestination == e.SourcePageType
+                        select i).FirstOrDefault();
             if (item != null)
             {
                 Menu.SelectedItem = item;
                 return;
             }
+
+            Menu.SelectedIndex = -1;
 
             item = (from i in SecondMenu.Items
                     where (i as MenuItem).NavigationDestination == e.SourcePageType
@@ -98,7 +100,10 @@ namespace XamlBrewer.Uwp.SplitViewNavigation
             if (item != null)
             {
                 SecondMenu.SelectedItem = item;
+                return;
             }
+
+            SecondMenu.SelectedIndex = -1;
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
