@@ -27,6 +27,8 @@ namespace Mvvm.Services
                     titleBar.ButtonForegroundColor = Colors.White;
                     titleBar.ButtonHoverBackgroundColor = ((SolidColorBrush)Application.Current.Resources["TitlebarBackgroundDarkBrush"]).Color;
                     titleBar.ButtonHoverForegroundColor = Colors.White;
+                    titleBar.ButtonPressedBackgroundColor = ((SolidColorBrush)Application.Current.Resources["TitlebarBackgroundLightBrush"]).Color;
+                    titleBar.ButtonPressedForegroundColor = Colors.White;
                     titleBar.InactiveBackgroundColor = titleBar.BackgroundColor;
                     titleBar.InactiveForegroundColor = titleBar.ForegroundColor;
                     titleBar.ButtonInactiveBackgroundColor = titleBar.BackgroundColor;
